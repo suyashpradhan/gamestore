@@ -1,16 +1,14 @@
 import React from "react";
 import {View} from "react-native";
-import {Button, Card, Checkbox, Text, TextInput} from "react-native-paper";
+import {Button, Checkbox, Text, TextInput} from "react-native-paper";
+import {Header} from "../components/Header.";
 
 const LoginScreen = () => {
     const [togglePassword, setTogglePassword] = React.useState(false);
     const [termsAndCondition, setTermsAndCondition] = React.useState(false);
     return (
-        <View style={{backgroundColor: "#303030", height: "100%"}}>
-            <Card mode="elevated" style={{height: "auto", backgroundColor: "black", borderRadius: "none"}}>
-                <Text variant="displayMedium"
-                      style={{textAlign: "center", paddingVertical: 150, color: "white"}}>GameStore</Text>
-            </Card>
+        <View style={{backgroundColor: "#303030", display: "flex", flex: 1}}>
+            <Header title="GameStore"/>
             <View style={{paddingHorizontal: 10, marginVertical: 40}}>
                 <View style={{marginBottom: 16}}>
                     <TextInput
@@ -69,3 +67,7 @@ const LoginScreen = () => {
     )
 }
 export default LoginScreen;
+
+function axios(arg0: { method: string; url: string; responseType: string; }) {
+    throw new Error("Function not implemented.");
+}
